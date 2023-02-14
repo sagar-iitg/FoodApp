@@ -17,8 +17,22 @@ version: '3.9'
 
 services:
   web:
+    image: "sagarkumar99/foodapp:latest"
+    ports:
+      - "8081:8080"
+
+
+
+```
+
+
+
+```
+version: '3.9'
+
+services:
+  web:
     build: .
-    #image: "sagarkumar99/foodapp:latest"
     ports:
       - "8081:8080"
 
