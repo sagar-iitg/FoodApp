@@ -10,7 +10,11 @@ docker-compose down
 docker-compose up -d
 ```
 
+```
 
+docker run --name mysqldb-container -p 3307:3306 -e MYSQL_ROOT_PASSWORD=123 -d mysql 
+
+```
 
 ```
 version: '3.9'
