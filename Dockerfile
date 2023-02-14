@@ -4,4 +4,4 @@ EXPOSE 8080
 
 ADD FoodApp.war /usr/local/tomcat/webapps
 
-CMD["catlina.sh","run"]
+CMD["catalina.sh","run"]
