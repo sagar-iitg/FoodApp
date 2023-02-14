@@ -1,3 +1,19 @@
 **/metadata/*
 /metadata/
 
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+*.class
+FoodApplication/Servers/
