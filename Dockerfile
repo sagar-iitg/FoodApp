@@ -1,4 +1,4 @@
-FROM tomcat:9.0-alpine
+FROM tomcat:9.0.71-jre11-temurin-focal
 MAINTAINER SAGAR KUMAR
 EXPOSE 8080
 
