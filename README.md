@@ -7,12 +7,6 @@ docker run --rm --name linkcontainer -d -p 8080:8080 --link db food
 
 ```
 
-```
-
-docker build -t app .
-docker run -itd -p 8080:8080 app
-```
-
 
 ```
 docker-compose down
