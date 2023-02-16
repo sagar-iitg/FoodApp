@@ -14,28 +14,17 @@ public class FoodCartDBUtil {
 	{
 		
 		
-		String url="jdbc:mysql://localhost:3306/food";
-		String userName="root";
-		String password="root";
+	
 		
 		
 		
 		ArrayList<Food> food=new ArrayList<>();
 		
-		//load Mysql
-		Class.forName("com.mysql.cj.jdbc.Driver");
 		
+	
+		Statement stmt=DBConnection.connection().createStatement();
 		
-		//get the connection
-		
-		Connection con=DriverManager.getConnection(url,userName,password);
-		
-		
-		//create a statement
-		
-		Statement stmt=con.createStatement();
-		
-		ResultSet rs=stmt.executeQuery("select * from foodcart");
+		ResultSet rs=stmt.executeQuery("select * from FOOD.foodcart");
 		
 		
 		while(rs.next())
