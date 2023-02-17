@@ -7,7 +7,7 @@ pipeline {
             steps {
               
               echo "Cloning from github"
-              git url:'https://github.com/sagar-iitg/Jenkins-Project-Node.git', branch:'master'
+              git url:'https://github.com/sagar-iitg/foodApp.git', branch:'master'
                 
                 
             }
@@ -16,7 +16,7 @@ pipeline {
              steps {
             echo "Building docker image"
               
-            sh 'docker build . -t sagarkumar99/node-todo-jenkins:latest'
+            sh 'docker build . -t sagarkumar99/foodapp:latest'
                 
             }
             
@@ -28,7 +28,7 @@ pipeline {
                 echo "Push docker image in docker hub"
                  withCredentials([usernamePassword(credentialsId: 'dockerhub', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
         sh "docker login -u $USERNAME -p $PASSWORD"
-        sh "docker push sagarkumar99/node-todo-jenkins:latest"
+        sh "docker push sagarkumar99/foodapp:latest"
     }
             }
         }
