@@ -20,11 +20,11 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
   ```
 
 ```
-    sudo apt-get update
-    sudo apt-get install jenkins
-    sudo systemctl enable jenkins
-    sudo systemctl start jenkins
-    sudo systemctl status jenkins
+sudo apt-get update
+sudo apt-get install jenkins
+sudo systemctl enable jenkins
+sudo systemctl start jenkins
+sudo systemctl status jenkins
 ```
 
 # Install docker
@@ -40,4 +40,9 @@ sudo usermod -aG jenkins $USER
 sudo usermod -aG docker $USER
 sudo usermod -aG docker jenkins
 sudo reboot
+```
+# Install docker-compose
+
+```
+sudo apt install docker-compose
 ```
