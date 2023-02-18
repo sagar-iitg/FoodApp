@@ -1,5 +1,5 @@
 
-## install java
+## Install java
 
 ```
 sudo apt update
@@ -8,7 +8,7 @@ java -version
 
 ```
 
-## install jenkins
+## Install jenkins
 
 ```
 curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo tee \
@@ -27,3 +27,16 @@ echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
     sudo systemctl status jenkins
 ```
 
+# Install docker
+
+```
+sudo apt install docker.io -y
+
+```
+# Permission
+
+```
+sudo usermod -aG jenkins $USER
+sudo usermod -aG docker $USER
+sudo usermod -aG docker jenkins
+```
