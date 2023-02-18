@@ -39,4 +39,5 @@ sudo apt install docker.io -y
 sudo usermod -aG jenkins $USER
 sudo usermod -aG docker $USER
 sudo usermod -aG docker jenkins
+sudo reboot
 ```
