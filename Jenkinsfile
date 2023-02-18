@@ -12,15 +12,7 @@ pipeline {
                 
             }
         }
-        stage('Build'){
-             steps {
-            echo "Building docker image"
-              
-            sh 'docker build . -t sagarkumar99/foodapp:latest'
-                
-            }
-            
-        }
+       
        
         stage('Test'){
              steps {
@@ -32,22 +24,14 @@ pipeline {
             
             
         }
-         stage('Check Current Working Directory'){
-             steps {
-              
-                   
-                   
-                   sh "pwd"
-                
-            }
-         }
+        
           
         stage('Deploy'){
              steps {
               
                    
                    
-                   sh "docker-compose down && docker-compose up -d"
+                   bash "docker-compose down && docker-compose up -d"
                 
             }
          
