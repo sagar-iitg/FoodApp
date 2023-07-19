@@ -16,3 +16,8 @@ docker run --rm --name linkcontainer -d -p 8080:8080 --link db food
 docker-compose down
 docker-compose up -d
 ```
+
+###  Application URL
+```
+http://localhost:8081/FoodApp/
+```
